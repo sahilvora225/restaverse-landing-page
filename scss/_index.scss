@@ -1,0 +1,107 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 0rem;
+    width: 80%;
+    margin: auto;
+
+    .logo-container {
+        height: 5rem;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .navigation-bar {
+        font-size: 1.7rem;
+
+        li {
+            list-style: none;
+        }
+
+        &-bullet {
+            text-decoration: none;
+            color: $black;
+        }
+    }
+}
+
+main {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+
+    h1 {
+        font-size: 10rem;
+        padding: 4rem 2rem;
+    }
+    
+    .subheader {
+        font-size: 3rem;
+        font-weight: 700;
+        display: flex;
+        margin: auto;
+        justify-content: left;
+        align-items: center;
+        width: max-content;
+        margin-bottom: 7rem;
+
+        p {
+            margin-right: 1rem;
+            margin-left: 1rem;
+        }
+
+        .giant-wheel {
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
+            transform-origin: 40px 40px 0;
+            // animation: rotate 4s ease-in-out 0s infinite;
+
+            .wagon {
+                backface-visibility: hidden;
+                &-1 {
+                    transform: translateZ(20px);
+                }
+                &-2 {
+                    transform: rotateX(120deg) translateZ(20px);
+                }
+                &-3 {
+                    transform: rotateX(240deg) translateZ(20px);
+                }
+            }
+        }
+    }
+
+    .cta {
+        background-color: $black;
+        color: $white;
+        height: 3rem;
+        width: max-content;
+        border-radius: 5rem;
+        padding: 1.5rem 5rem;
+        font-size: 2.5rem;
+        font-weight: 500;
+        text-decoration: none;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateX(0deg);
+        // opacity: 1;
+    }
+    30% {
+        transform: rotateX(120deg);
+        // opacity: 0;
+    }
+    60% {
+        transform: rotateX(240deg);
+        // opacity: 0;
+    }
+    100% {
+        transform: rotateX(360deg);
+        // opacity: 1;
+    }
+}
